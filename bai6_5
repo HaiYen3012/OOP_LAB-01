@@ -1,0 +1,37 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class b65 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input the size of the array
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+        
+        int[] arr = new int[n];
+        int sum = 0;
+
+        // Input array elements
+        System.out.println("Enter " + n + " integers:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+            sum += arr[i]; // Calculate sum in the same loop
+        }
+
+        // Sort the array using Arrays.sort()
+        Arrays.sort(arr);
+
+        // Calculate average
+        double average = (double) sum / n;
+
+        // Output results
+        System.out.printf("Sum: %d\nAverage: %.2f\n", sum, average);
+        System.out.print("Sorted array: ");
+        for (int value : arr) {
+            System.out.print(value + " ");
+        }
+        
+        scanner.close();
+    }
+}

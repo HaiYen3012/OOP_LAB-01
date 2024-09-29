@@ -1,0 +1,23 @@
+import javax.swing.JOptionPane;
+
+public class ChoosingOption {
+    public static void main(String[] args) {
+        int response = JOptionPane.showConfirmDialog(null, "Do you want to proceed?", "Choose an option", JOptionPane.YES_NO_OPTION);    
+ 
+        if (response == JOptionPane.YES_OPTION) {
+            System.out.println("You chose Yes!");
+        } else {
+            System.out.println("You chose No.");
+        }
+
+        Object[] options = {"I do", "I don’t"};
+        int customResponse = JOptionPane.showOptionDialog(null, "Do you agree?", "Choose", 
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+        
+        if (customResponse == 0) {
+            System.out.println("You chose 'I do'.");
+        } else {
+            System.out.println("You chose 'I don’t'.");
+        }
+    }
+}

@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class InputFromKeyboard {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Nhập tên của bạn: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Nhập tuổi của bạn: ");
+        int age = scanner.nextInt();
+
+        System.out.println("Bạn cao bao nhiêu?");
+        double height = scanner.nextDouble();
+
+        System.out.println("Xin chào, " + name + "! Bạn " + age + " tuổi." + " Chiều cao của bạn là " + height);
+
+        scanner.close();
+    }
+}

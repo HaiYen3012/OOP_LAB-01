@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Ex225{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhap so lan 1: ");
+        double num1=scanner.nextDouble();
+        System.out.print("Nhap so lan 2: ");
+        double num2=scanner.nextDouble();
+        System.out.printf("Tong hai so: %f\n", num1+num2);
+        System.out.printf("Hieu hai so: %f\n", num1-num2);
+        System.out.printf("Tich hai so: %f\n", num1*num2);
+        System.out.printf("Thuong hai so: %f", num1/num2);
+        scanner.close();
+    }
+}
